@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_PDFKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hao-08-KLq">
+                                <rect key="frame" x="20" y="699" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Hu2-AK-lf5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create PDF"/>
+                                <connections>
+                                    <action selector="createPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jqp-fe-CTz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEX-bO-Z02">
+                                <rect key="frame" x="20" y="756" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="1FE-Fj-YBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View PDF"/>
+                                <connections>
+                                    <action selector="viewPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ja-Ne-Y9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9J-9l-NgW">
+                                <rect key="frame" x="20" y="813" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="XJx-ha-8FD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Annotation"/>
+                                <connections>
+                                    <action selector="addAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBz-tc-Nv4"/>
+                                    <action selector="viewPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aA5-zh-dGx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojn-KE-kwk">
+                                <rect key="frame" x="20" y="44" width="374" height="652"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mEX-bO-Z02" firstAttribute="trailing" secondItem="b9J-9l-NgW" secondAttribute="trailing" id="89O-Mg-VSt"/>
+                            <constraint firstItem="Hao-08-KLq" firstAttribute="top" secondItem="ojn-KE-kwk" secondAttribute="bottom" constant="3" id="Gho-ge-WaY"/>
+                            <constraint firstItem="ojn-KE-kwk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jqu-3o-B7c"/>
+                            <constraint firstItem="ojn-KE-kwk" firstAttribute="trailing" secondItem="Hao-08-KLq" secondAttribute="trailing" id="K2n-ge-cuJ"/>
+                            <constraint firstItem="mEX-bO-Z02" firstAttribute="leading" secondItem="b9J-9l-NgW" secondAttribute="leading" id="Mjm-Ea-fVW"/>
+                            <constraint firstItem="ojn-KE-kwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OcF-Ly-gCZ"/>
+                            <constraint firstItem="ojn-KE-kwk" firstAttribute="leading" secondItem="Hao-08-KLq" secondAttribute="leading" id="Quz-3J-Vvw"/>
+                            <constraint firstItem="Hao-08-KLq" firstAttribute="leading" secondItem="mEX-bO-Z02" secondAttribute="leading" id="aIV-QG-UHp"/>
+                            <constraint firstItem="Hao-08-KLq" firstAttribute="trailing" secondItem="mEX-bO-Z02" secondAttribute="trailing" id="bno-Gs-Wc9"/>
+                            <constraint firstItem="ojn-KE-kwk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gHd-Sb-F25"/>
+                            <constraint firstItem="b9J-9l-NgW" firstAttribute="top" secondItem="mEX-bO-Z02" secondAttribute="bottom" constant="8" symbolic="YES" id="gzl-ea-28h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b9J-9l-NgW" secondAttribute="bottom" id="v7d-w8-2Pc"/>
+                            <constraint firstItem="mEX-bO-Z02" firstAttribute="top" secondItem="Hao-08-KLq" secondAttribute="bottom" constant="8" id="z7C-mK-cyA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="ojn-KE-kwk" id="JCw-Lg-YMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
